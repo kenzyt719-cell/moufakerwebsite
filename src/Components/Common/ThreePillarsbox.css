@@ -1,0 +1,54 @@
+.pillardivmain{
+
+    padding: 20px;
+    gap: 50px;
+    width: 78%;
+    height: 230px;
+    border-radius: 24.07px;
+    border: 1.003px solid rgba(255, 255, 255, 0.10);
+    background: rgba(77, 51, 189, 0.80);
+    display: flex;
+    justify-content: center;
+}
+.boxpillarin{
+    display: flex;
+    width: 24vw;
+height: 49.256px;
+padding-left: 16.046px;
+align-items: center;
+gap: 16.046px;
+border-radius: 14.041px;
+border: 1.003px solid rgba(255, 255, 255, 0.10);
+background: rgba(255, 255, 255, 0.15);
+}
+.textsxhool{
+    color: #FFF;
+font-family: lufga;
+font-size: 16.046px;
+font-style: normal;
+font-weight: 500;
+line-height: 24.07px; /* 150% */
+}
+.boxesthreee{
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+.text2three{
+color: #D1D5DC;
+font-family: lufga;
+font-size: 1vw;
+font-style: normal;
+font-weight: 400;
+    line-height: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.text1three{
+    color: #FFF;
+font-family: lufga;
+font-size: 3vw;
+font-style: normal;
+font-weight: 700;
+line-height: 48.139px; 
+}

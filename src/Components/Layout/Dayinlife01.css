@@ -1,0 +1,68 @@
+.h1dayinlife{
+    color: #FFF;
+text-align: center;
+font-family: Lufga;
+font-size: 59.939px;
+font-style: normal;
+font-weight: 700;
+line-height: 59.939px; /* 100% */
+}
+.ptitle{
+
+    color: #99A1AF;
+text-align: center;
+font-family: Cairo;
+font-size: 19.98px;
+font-style: normal;
+font-weight: 400;
+line-height: 27.972px; 
+}
+.boxsesday{
+    display: flex;
+    gap: 20px;
+    display: flex;
+    justify-content: center;
+
+}
+.boxsesmain{
+
+       padding-top: 30px;
+    padding-left: 50px;
+     padding-right: 50px;
+    gap: 10px;
+    justify-content: left;
+    display: flex;
+    width: 70%;
+    flex-direction: column;
+    height: 143.526px;
+    border-radius: 29.106px;
+    background: #462DA9;
+    height: 100px;
+}
+.titleinbox{
+color: #FFF;
+font-family: lufga;
+font-size: 23.976px;
+font-style: normal;
+font-weight: 700;
+line-height: 31.967px; /* 133.333% */
+}
+.titleinbox02{
+  color: #D1D5DC;
+font-family: lufga;
+font-size: 15.984px;
+font-style: normal;
+font-weight: 400;
+line-height: 25.974px; /* 162.5% */  
+}
+.divone{
+    background-color: #250041;
+}
+.boxesmaindiv{
+
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+    gap: 30px;
+    margin-top: 40px;
+}

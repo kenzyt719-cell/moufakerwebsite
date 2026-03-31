@@ -1,0 +1,7 @@
+.styleboxesthree {
+    /* width: 80%; */
+    flex-wrap: wrap;
+    gap: 5%;
+    display: flex;
+    justify-content: center;
+}
