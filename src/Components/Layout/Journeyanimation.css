@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Lufga:wght@300;400;600&display=swap');
+
+
+
+.timeline {
+  position: relative;
+  width: 100%;
+  padding: 80px 0;
+  font-family: "Lufga", sans-serif;
+}
+
+/* CENTER LINE */
+.timeline-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 3px;
+  height: 100%;
+  transform: translateX(-50%);
+  background: linear-gradient(to bottom, #8b5cf6, #06b6d4);
+}
+
+/* ITEM */
+.timeline-item {
+  position: relative;
+  width: 50%;
+  padding: 40px 60px;
+  box-sizing: border-box;
+}
+
+/* LEFT / RIGHT */
+.timeline-item.left {
+  left: 0;
+  text-align: right;
+}
+
+.timeline-item.right {
+  left: 50%;
+}
+
+/* CONTENT BOX */
+.timeline-content {
+  background: #0a0a0a;
+  border-radius: 16px;
+  padding: 24px;
+  color: white;
+  border: 1px solid rgba(255,255,255,0.1);
+  position: relative;
+  transition: 0.4s;
+}
+
+/* HOVER */
+.timeline-content:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
+/* STEP TEXT */
+.step {
+  font-size: 12px;
+  opacity: 0.6;
+}
+
+.timeline-content h3 {
+  margin: 8px 0;
+  font-size: 20px;
+}
+
+.timeline-content p {
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+/* BOTTOM GRADIENT LINE */
+.progress-line {
+  height: 3px;
+  width: 0;
+  margin-top: 15px;
+  background: linear-gradient(to right, #8b5cf6, #06b6d4);
+  transition: width 0.6s ease;
+}
+
+.timeline-content:hover .progress-line {
+  width: 100%;
+}
+
+/* CIRCLE NUMBER */
+.circle {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translate(-50%, -50%);
+  width: 45px;
+  height: 45px;
+  background: #000;
+  border: 3px solid #8b5cf6;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 600;
+  z-index: 2;
+}
+
+.timeline-item.right .circle {
+  left: 0;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .timeline-line {
+    left: 20px;
+  }
+
+  .timeline-item {
+    width: 100%;
+    padding-left: 60px;
+    padding-right: 20px;
+  }
+
+  .timeline-item.right {
+    left: 0;
+  }
+
+  .timeline-item.left {
+    text-align: left;
+  }
+
+  .circle {
+    left: 20px !important;
+  }
+}
+/* INITIAL STATE */
+.timeline-item {
+  opacity: 0;
+  transform: translateY(50px) scale(0.95);
+  transition: all 1.5s ease;
+}
+
+/* WHEN ACTIVE */
+.timeline-item.show {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* slight delay feel */
+.timeline-item.show .timeline-content {
+  transition-delay: 0.9s;
+}

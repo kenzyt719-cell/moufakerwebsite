@@ -1,0 +1,95 @@
+.download-app {
+  width: 100%;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  font-family: "Lufga", sans-serif;
+}
+
+.download-container {
+    width: 60%;
+    max-width: 1200px;
+    background: linear-gradient(90deg, #a98cd8, #d89acb);
+    border-radius: 12px;
+    padding: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    overflow: visible;
+}
+
+/* TEXT */
+.download-text {
+  max-width: 500px;
+  color: white;
+}
+
+.download-text h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.download-text p {
+  font-size: 16px;
+  opacity: 0.9;
+  margin-bottom: 30px;
+}
+
+.download-btn {
+  background: #ffa800;
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* IMAGE */
+.download-image {
+  position: absolute;
+  right: -40px;
+  bottom: -20px;
+}
+
+.download-image img {
+    width: 370px;
+    height: auto;
+}
+
+/* 📱 RESPONSIVE */
+@media (max-width: 900px) {
+  .download-container {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .download-text h1 {
+    font-size: 36px;
+  }
+
+  .download-image {
+    position: relative;
+    right: 0;
+    bottom: -30px;
+    margin-top: 20px;
+  }
+
+  .download-image img {
+    width: 200px;
+  }
+}
+
+@media (max-width: 500px) {
+  .download-text h1 {
+    font-size: 28px;
+  }
+
+  .download-btn {
+    width: 100%;
+  }
+}

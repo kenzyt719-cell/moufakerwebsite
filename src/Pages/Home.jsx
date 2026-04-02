@@ -4,6 +4,11 @@ import Homesection from "../Components/Layout/Homesection";
 import Dayinlife01 from "../Components/Layout/Dayinlife01";
 import Everythingsection from "../Components/Layout/Everythingsection";
 import ThreePillarSection from "../Components/Layout/ThreePillarSection";
+import Fiftypercentoff from "../Components/Layout/Fiftypercentoff";
+import Downloadapp from "../Components/Layout/Downloadapp";
+import Journeyanimation  from "../Components/Layout/Journeyanimation";
+import Howtostudy  from "../Components/Layout/Howtostudy";
+import Transform  from "../Components/Layout/Transform";
 
 
 import "./Home.css";
@@ -18,6 +23,11 @@ const Home = () => {
  <Dayinlife01 />
  <Everythingsection />
  <ThreePillarSection />
+ <Fiftypercentoff />
+ <Downloadapp />
+<Journeyanimation />
+<Howtostudy />
+<Transform />
 
 
 

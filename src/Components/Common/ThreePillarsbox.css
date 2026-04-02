@@ -1,8 +1,9 @@
 .pillardivmain{
 
-    padding: 20px;
+ 
+    padding: 6vh 0 6vh 0;
     gap: 50px;
-    width: 78%;
+    width: 68%;
     height: 230px;
     border-radius: 24.07px;
     border: 1.003px solid rgba(255, 255, 255, 0.10);
@@ -51,4 +52,15 @@ font-size: 3vw;
 font-style: normal;
 font-weight: 700;
 line-height: 48.139px; 
+}
+h1,h2,p{
+   padding: 0;
+    margin: 0;
+}
+body{
+   
+    margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* hides horizontal overflow */
+  width: 100%;
 }

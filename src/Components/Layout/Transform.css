@@ -1,0 +1,105 @@
+.divtransform {
+  width: 90%;
+  margin: 80px auto;
+  height: 300px; /* 👈 أقصر */
+  border-radius: 25px;
+  position: relative;
+  overflow: visible;
+
+  background: linear-gradient(90deg, #a78bfa, #d8b4fe);
+
+  display: flex;
+  align-items: center;
+  padding: 60px;
+}
+
+/* النص */
+.transform-content {
+  z-index: 2;
+  max-width: 50%;
+}
+
+.transform-content h1 {
+  font-family: "Lufga", sans-serif;
+  font-size: 44px;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.transform-content p {
+  font-family: "Lufga", sans-serif;
+  color: #f3f4f6;
+  margin-bottom: 25px;
+  font-size: 15px;
+}
+
+/* buttons */
+.buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.btn {
+  font-family: "Lufga", sans-serif;
+  padding: 12px 26px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.btn.primary {
+  background: #facc15;
+  color: white;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.btn.primary:hover {
+  transform: translateY(-3px);
+}
+
+.btn.secondary {
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+}
+
+.btn.secondary:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+/* 👇 الصورة طالعة أكتر من فوق */
+.boy-img {
+  position: absolute;
+  right: 0;
+  top: -120px; /* 👈 طلوع أكبر */
+  height: 150%;
+  object-fit: contain;
+  z-index: 3;
+}
+
+/* responsive */
+@media (max-width: 900px) {
+  .divtransform {
+    flex-direction: column;
+    height: auto;
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .transform-content {
+    max-width: 100%;
+  }
+
+  .boy-img {
+    position: relative;
+    top: 0;
+    height: 220px;
+    margin-top: 20px;
+  }
+
+  .buttons {
+    justify-content: center;
+  }
+}

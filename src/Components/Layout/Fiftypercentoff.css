@@ -1,0 +1,174 @@
+/* Wrapper */
+.fifty-wrapper {
+  width: 100%;
+  /* padding: 40px 20px; */
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+/* Container */
+.fifty-container {
+    width: 100vw;
+    /* max-width: 1200px; */
+    /* height: 420px; */
+    /* border-radius: 20px; */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10% 10% 0px 10%;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Optional: card hover effect */
+.fifty-container:hover {
+  transform: scale(1.02);
+}
+
+/* LEFT CONTENT */
+.fifty-content {
+    margin-bottom: 150px;
+    max-width: 550px;
+    color: white;
+    z-index: 2;
+}
+
+/* TITLE */
+.fifty-title {
+  font-family: "Lufga", sans-serif;
+    font-size: 68px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 20px;
+
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease;
+}
+
+/* DESCRIPTION */
+.fifty-desc {
+  font-family: "Lufga", sans-serif;
+  font-size: 25px;
+  line-height: 1.6;
+  opacity: 0.9;
+
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease;
+}
+
+/* BUTTON */
+.fifty-btn {
+  margin-top: 25px;
+
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease;
+}
+
+/* RIGHT IMAGE */
+.fifty-image {
+  position: relative;
+  height: 100%;
+  transition: transform 0.5s ease;
+}
+
+.fifty-image img {
+  position: absolute;
+  right: -60px;
+  bottom: 0;
+  height: 160%;
+  max-height: 530px;
+  object-fit: contain;
+  transition: transform 0.5s ease;
+}
+
+/* ========================= */
+/* 🎯 HOVER EFFECTS */
+/* ========================= */
+
+.fifty-container:hover .fifty-title {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.1s;
+}
+
+.fifty-container:hover .fifty-desc {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.2s;
+}
+
+.fifty-container:hover .fifty-btn {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.3s;
+}
+
+.fifty-container:hover .fifty-image img {
+  transform: scale(1.08) translateY(-10px);
+}
+
+/* ========================= */
+/* 📱 TABLET */
+/* ========================= */
+@media (max-width: 992px) {
+  .fifty-container {
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+    padding: 30px 20px;
+  }
+
+  .fifty-content {
+    max-width: 100%;
+  }
+
+  .fifty-title {
+    font-size: 36px;
+  }
+
+  .fifty-desc {
+    font-size: 16px;
+  }
+
+  .fifty-btn {
+    display: flex;
+    justify-content: center;
+  }
+
+  .fifty-image {
+    margin-top: 20px;
+    height: auto;
+  }
+
+  .fifty-image img {
+    position: relative;
+    right: 0;
+    height: 260px;
+    max-height: none;
+  }
+}
+
+/* ========================= */
+/* 📱 MOBILE */
+/* ========================= */
+@media (max-width: 576px) {
+  .fifty-title {
+    font-size: 28px;
+  }
+
+  .fifty-desc {
+    font-size: 14px;
+  }
+
+  .fifty-container {
+    border-radius: 16px;
+  }
+}
