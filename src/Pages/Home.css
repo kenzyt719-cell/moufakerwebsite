@@ -1,6 +1,10 @@
 .home{
     background-color:  #1D0033;
-    height: 500px;
+   background-image: url('../Assets/bgscreen01.png'); /* عدّل المسار حسب مكان الصورة */
+  background-size: cover; /* يملأ الصفحة بالكامل */
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh; /* طول الصفحة على الأقل يساوي طول الشاشة */
 }
 h1,h2,p{
    padding: 0;

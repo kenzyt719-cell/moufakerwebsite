@@ -12,25 +12,22 @@ import Transform  from "../Components/Layout/Transform";
 import Heromain  from "../Components/Layout/Heromain";
 
 
-import "./Home.css";
+import "./ForSchool.css";
 
-const Home = () => {
+const ForSchool = () => {
     return ( <>
     <div className='home'>
  <Nav />
 
 
- <Homesection />
- <Dayinlife01 />
- <Everythingsection />
- <ThreePillarSection />
- <Fiftypercentoff />
- <Downloadapp />
-<Journeyanimation />
-<Howtostudy />
-<Transform />
-{/* <Heromain /> */}
 
+<Homesection
+  title="Your Journey to Success Starts Here"
+  description="Imagine a world where studying isn't overwhelming. Where you have a personal companion that understands your struggles, celebrates your wins, and guides you every step of the way."
+  buttonText="Start Your Free Trial"
+/>
+
+{/* <Heromain /> */}
 
 
 
@@ -49,4 +46,4 @@ const Home = () => {
     </> );
 }
  
-export default Home;
+export default ForSchool;
