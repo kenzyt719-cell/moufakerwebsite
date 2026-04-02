@@ -10,6 +10,7 @@ import Journeyanimation  from "../Components/Layout/Journeyanimation";
 import Howtostudy  from "../Components/Layout/Howtostudy";
 import Transform  from "../Components/Layout/Transform";
 import Heromain  from "../Components/Layout/Heromain";
+import Sec02forschool from "../Components/Layout/Sec02forschool";
 
 
 import "./ForSchool.css";
@@ -27,9 +28,7 @@ const ForSchool = () => {
   buttonText="Start Your Free Trial"
 />
 
-{/* <Heromain /> */}
-
-
+<Sec02forschool />
 
 
 

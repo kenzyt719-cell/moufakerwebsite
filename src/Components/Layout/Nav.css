@@ -1,34 +1,41 @@
 body {
-  background: #eaeaea;
+  margin: 0;
+  padding: 0;
+  padding-top: 120px; /* عشان الناف ثابت */
   font-family: sans-serif;
+  background: #eaeaea;
+  overflow-x: hidden;
 }
 
+/* wrapper */
 .nav-wrapper {
+  position: fixed;
+  top: 20px;
+  left: 0;
+  width: 100%;
   display: flex;
   justify-content: center;
-  padding-top: 50px;
-
-
-
-    /* height: 80px;
-    width: 90%;
-    position: absolute;
-    z-index: 9;
-    display: flex;
-    justify-content: center;
-    padding-top: 50px; */
+  z-index: 999;
 }
 
+/* navbar */
 .navbar {
   width: 80%;
   background: #4b2e5e;
   color: white;
-  padding: 20px 40px;
+  padding: 18px 40px;
   border-radius: 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+  transition: all 0.3s ease;
+}
+
+/* hover on navbar */
+.navbar:hover {
+  background: #5e3a75;
+  transform: translateY(-3px);
 }
 
 /* left + right */
@@ -40,10 +47,10 @@ body {
   align-items: center;
 }
 
-/* logo center */
-.logo {
-  font-size: 28px;
-  font-weight: bold;
+/* logo */
+.logo img {
+  height: 40px;
+  object-fit: contain;
 }
 
 /* links */
@@ -53,8 +60,24 @@ body {
   transition: 0.3s;
 }
 
+/* underline animation */
+.navbar li::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #ffffff;
+  transition: 0.3s;
+}
+
+.navbar li:hover::after {
+  width: 100%;
+}
+
 .navbar li:hover {
-  opacity: 0.7;
+  color: #ffd6ff;
 }
 
 /* dropdown */
@@ -69,12 +92,19 @@ body {
   min-width: 150px;
   display: none;
   box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+
+  opacity: 0;
+  transform: translateY(10px);
+  transition: 0.3s;
 }
 
 .dropdown:hover .submenu {
   display: block;
+  opacity: 1;
+  transform: translateY(0);
 }
 
+/* submenu items */
 .submenu li {
   padding: 10px 20px;
   white-space: nowrap;
@@ -82,19 +112,4 @@ body {
 
 .submenu li:hover {
   background: rgba(255,255,255,0.1);
-}
-.logo img {
-  height: 40px;
-  object-fit: contain;
-}
-h1,h2,p{
-   padding: 0;
-    margin: 0;
-}
-body{
-   
-    margin: 0;
-  padding: 0;
-  overflow-x: hidden; /* hides horizontal overflow */
-  width: 100%;
 }
