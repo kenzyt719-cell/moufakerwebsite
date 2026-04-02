@@ -1,19 +1,21 @@
 import React from "react";
 import "./Boxsesso2dorschooL.css";
-import bb01 from "../../Assets/bb01.png";
 
-const Boxsesso2dorschooL = ({ className = "" }) => {
+const Boxsesso2dorschooL = ({
+  className = "",
+  bgColor = "#9880FF",
+  imgSrc,
+  title = "",
+  description = "",
+}) => {
   return (
-    <div className={`sec2boxx ${className}`}>
-      <img src={bb01} alt="box" className="arrow-img" />
-
-      <h1 className="text01seco2">
-        Students underperform due to poor time management
-      </h1>
-
-      <p className="text02seco2">
-        Many students struggle to balance multiple subjects, leading to inconsistent study habits and lower academic performance.
-      </p>
+    <div
+      className={`sec2boxx ${className}`}
+      style={{ background: bgColor }}
+    >
+      {imgSrc && <img src={imgSrc} alt="box" className="arrow-img" />}
+      <h1 className="text01seco2">{title}</h1>
+      <p className="text02seco2">{description}</p>
     </div>
   );
 };

@@ -1,5 +1,5 @@
 import React from "react";
-import "./Sec02forschool.css";
+import "./Sec04forschool.css";
 import Boxsesso2dorschooL from "../Common/Boxsesso2dorschooL";
 import Titleandsub from "../Common/Titleandsub";
 import bb01 from "../../Assets/bb01.png";
@@ -7,12 +7,12 @@ import bb02 from "../../Assets/bb01.png";
 import bb03 from "../../Assets/bb01.png";
 import bb04 from "../../Assets/bb01.png";
 
-const Sec02forschool = () => {
+const Sec04forschool = () => {
   return (
     <div className="sec02-container">
       <Titleandsub
-        title="The Real Challenges School Faces"
-        subtitle="Modern schools struggle with operational inefficiencies that impact both student outcomes and administrative effectiveness."
+        title="Benefits for School Leadership"
+        subtitle="Direct institutional value that transforms how you manage and grow your school."
       />
 
       <div className="divsec201 hover-trigger">
@@ -63,4 +63,4 @@ const Sec02forschool = () => {
   );
 };
 
-export default Sec02forschool;
+export default Sec04forschool;

@@ -12,6 +12,11 @@ import Transform  from "../Components/Layout/Transform";
 import Heromain  from "../Components/Layout/Heromain";
 import Sec02forschool from "../Components/Layout/Sec02forschool";
 
+import Sec03provides from "../Components/Layout/Sec03provides";
+import Sec04forschool from "../Components/Layout/Sec04forschool";
+import Squares from "../Components/Layout/Squares";
+
+import FeaturesSection from "../Components/Layout/FeaturesSection";
 
 import "./ForSchool.css";
 
@@ -29,8 +34,10 @@ const ForSchool = () => {
 />
 
 <Sec02forschool />
-
-
+<Sec03provides />
+<Sec04forschool />
+<Squares />
+<FeaturesSection />
 
 
     </div>

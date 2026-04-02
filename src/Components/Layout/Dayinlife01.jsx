@@ -1,62 +1,37 @@
 import React from "react";
-import "./Dayinlife01.css";
-import ButtonOne from "../Common/ButtonOne";
-import bg from "../../Assets/bgscreens.png";
+import DayLayoutbox from "../Common/DayLayoutbox";
+import by01 from "../../Assets/by01.png"; // أيقونة PNG
 
 const Dayinlife01 = () => {
+  const boxesData = [
+    {
+      title: "Daily Review",
+      description: "Celebrate today's achievements! You completed 85% of your plan and earned 250 XP.",
+      icon: by01
+    },
+    {
+      title: "Morning Motivation",
+      description: "Start your day with inspiring quotes and tips.",
+      icon: by01
+    },
+    {
+      title: "Progress Tracker",
+      description: "See your learning streak and milestones.",
+      icon: by01
+    },
+    {
+      title: "Evening Summary",
+      description: "Review what you've learned and plan for tomorrow.",
+      icon: by01
+    },
+  ];
+
   return (
-   <>
-   <div className="divone">
-
-  
-   <h1 className="h1dayinlife">A Day in Your Life with Moufakker</h1>
-   <p className="ptitle">From morning to night, we've got your back</p>
-
-
-<div className="boxesmaindiv">
-
-
-   <div className="boxsesday">
-    <div className="boxsesmain">
-        <p className="titleinbox">Daily Review</p>
-        <p className="titleinbox02">Celebrate today's achievements! You completed 85% of your plan and earned 250 XP.</p>
-
-    </div>
-
-   </div>
-
-  <div className="boxsesday">
-    <div className="boxsesmain">
-        <p className="titleinbox">Daily Review</p>
-        <p className="titleinbox02">Celebrate today's achievements! You completed 85% of your plan and earned 250 XP.</p>
-
-    </div>
-
-   </div>
-
-  <div className="boxsesday">
-    <div className="boxsesmain">
-        <p className="titleinbox">Daily Review</p>
-        <p className="titleinbox02">Celebrate today's achievements! You completed 85% of your plan and earned 250 XP.</p>
-
-    </div>
-
-   </div>
-  <div className="boxsesday">
-    <div className="boxsesmain">
-        <p className="titleinbox">Daily Review</p>
-        <p className="titleinbox02">Celebrate today's achievements! You completed 85% of your plan and earned 250 XP.</p>
-
-    </div>
-
-   </div>
-
-
-</div>
-
-    </div>
-
-   </>
+    <DayLayoutbox
+      title="A Day in Your Life with Moufakker"
+      subtitle="From morning to night, we've got your back"
+      boxes={boxesData}
+    />
   );
 };
 

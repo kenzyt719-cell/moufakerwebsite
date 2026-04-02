@@ -1,0 +1,41 @@
+.squareminidiv{
+
+    gap: 10px;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    width: 254.674px;
+height: 174.634px;
+border-radius: 17.911px;
+background: rgba(152, 128, 255, 0.60);
+box-shadow: 0 4.478px 4.478px 0 rgba(253, 199, 0, 0.20);
+}
+.h1square{
+   color: #FFF;
+text-align: center;
+font-family: lufga;
+font-size: 32px;
+font-style: normal;
+font-weight: 500;
+line-height: 40.3px; /* 120% */
+}
+.h2square{
+   color: rgba(255, 255, 255, 0.60);
+text-align: center;
+font-family: lufga;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 22.389px; /* 142.857% */
+}
+.iconsq{
+    width: 35.822px;
+height: 35.822px;
+}
+.divsquares{
+    display: flex;
+    justify-content: center; 
+    gap: 30px;
+    flex-wrap: wrap;
+}
