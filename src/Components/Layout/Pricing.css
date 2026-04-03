@@ -4,12 +4,12 @@
 /* WRAPPER */
 .pricing-wrapper {
   width: 100%;
-  min-height: 100vh;
-  background: linear-gradient(135deg, #1a0933, #3a0f6f);
+  /* min-height: 100vh; */
+  /* background: linear-gradient(135deg, #1a0933, #3a0f6f); */
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 40px 20px;
+    padding: 0px 40px 10% 0px;
   box-sizing: border-box;
   font-family: "Lufga", "Inter", sans-serif;
 }

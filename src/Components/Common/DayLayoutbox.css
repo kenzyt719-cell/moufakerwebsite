@@ -1,5 +1,5 @@
 .divone {
-    background-color: #250041;
+   background-color: #4d33bd;
     padding: 50px 20px;
     min-height: 100vh;
     display: flex;
@@ -58,7 +58,7 @@
     width: 80%;
     min-height: 100px;        /* بدل height لتجنب القص */
     border-radius: 30px;
-    background: #462DA9;
+     background: #9880ff;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
 }

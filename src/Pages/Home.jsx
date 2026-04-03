@@ -33,7 +33,7 @@ const Home = () => {
 
 
 
-bgscreen01.png
+
 
 
 

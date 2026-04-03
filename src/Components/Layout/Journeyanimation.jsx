@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Journeyanimation.css";
+import Titleandsub from "../Common/Titleandsub";
 
 const steps = [
   {
@@ -32,6 +33,11 @@ const Journeyanimation = () => {
   };
 
   return (
+    <>
+  <Titleandsub
+        title="Your learning journey in simple steps"
+        subtitle="Your learning journey in simple steps"
+      />
     <div className="timeline" onMouseEnter={handleEnter}>
       <div className="timeline-line"></div>
 
@@ -53,6 +59,7 @@ const Journeyanimation = () => {
         </div>
       ))}
     </div>
+        </>
   );
 };
 

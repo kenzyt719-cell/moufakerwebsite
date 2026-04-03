@@ -7,9 +7,10 @@
 }
 
 .download-container {
-    width: 60%;
+ 
+    width: 70%;
     max-width: 1200px;
-    background: linear-gradient(90deg, #a98cd8, #d89acb);
+    background: linear-gradient(90deg, #a98cd8, #ff00ca5e);
     border-radius: 12px;
     padding: 60px;
     display: flex;

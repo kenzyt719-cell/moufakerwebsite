@@ -1,10 +1,16 @@
 import React from "react";
 import "./Pricing.css";
 import icon from "../../Assets/Container.png";
+import Titleandsub from "../Common/Titleandsub";
 
 
 const Pricing = () => {
   return (
+    <>
+      <Titleandsub
+        title="Choose Your Perfect Plan"
+        subtitle="Flexible plans for all your educational needs"
+      />
     <div className="pricing-wrapper">
       <div className="pricing-container">
 
@@ -80,6 +86,7 @@ const Pricing = () => {
 
       </div>
     </div>
+    </>
   );
 };
 
