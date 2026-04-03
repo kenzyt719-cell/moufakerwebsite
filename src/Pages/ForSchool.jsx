@@ -16,6 +16,7 @@ import Sec03provides from "../Components/Layout/Sec03provides";
 import Sec04forschool from "../Components/Layout/Sec04forschool";
 import Squares from "../Components/Layout/Squares";
 import Howitworks from "../Components/Layout/Howitworks";
+import Footer from "../Components/Layout/Footer";
 
 import FeaturesSection from "../Components/Layout/FeaturesSection";
 
@@ -40,6 +41,7 @@ Academic System."
 <Sec04forschool />
 <Squares />
 <FeaturesSection />
+       <Footer />
 
 
     </div>
