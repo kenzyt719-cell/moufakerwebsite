@@ -4,6 +4,8 @@ import Home from './Pages/Home';
 import ForSchool from './Pages/ForSchool';
 import ContactUs from './Pages/ContactUs';
 import FaqScreen from './Pages/FaqScreen';
+import HomeMain from './Pages/HomeMain';
+
 
 
 const RountingApp = () => {
@@ -16,6 +18,7 @@ const RountingApp = () => {
 
         <Route path="/ContactUs" element={<ContactUs />} />
         <Route path="/FaqScreen" element={<FaqScreen />} />
+        <Route path="/HomeMain" element={<HomeMain />} />
 
         
 

@@ -1,0 +1,146 @@
+/* FONT */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+/* WRAPPER */
+.pricing-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1a0933, #3a0f6f);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  font-family: "Lufga", "Inter", sans-serif;
+}
+
+/* CONTAINER */
+.pricing-container {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* CARD */
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 25px;
+  border-radius: 20px;
+  width: 320px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  position: relative;
+  transition: 0.3s;
+}
+
+/* ICON */
+.icon {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+/* BADGE */
+.badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #ff3cac;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+/* TEXT */
+.card h2 {
+  margin: 0;
+  font-weight: 600;
+}
+
+.desc {
+  opacity: 0.7;
+  font-size: 14px;
+}
+
+.price {
+  font-size: 40px;
+  margin: 10px 0;
+}
+
+.price span {
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+/* FEATURES */
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 14px;
+}
+
+/* BUTTON */
+.btn {
+  margin-top: auto;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* GRADIENT BUTTON (PRO) */
+.gradient {
+  background: linear-gradient(90deg, #a044ff, #3f8cff);
+}
+
+/* BORDER COLORS */
+.blue {
+  border: 1px solid #3f8cff;
+}
+
+.pink {
+  border: 1px solid #ff3cac;
+}
+
+.orange {
+  border: 1px solid #ff8c42;
+}
+
+/* HOVER EFFECT */
+.card:hover {
+  transform: translateY(-6px);
+}
+
+/* GLOW ON HOVER */
+.blue:hover {
+  box-shadow: 0 0 25px rgba(63, 140, 255, 0.3);
+}
+
+.pink:hover {
+  box-shadow: 0 0 25px rgba(255, 60, 172, 0.3);
+}
+
+.orange:hover {
+  box-shadow: 0 0 25px rgba(255, 140, 66, 0.3);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .card {
+    width: 100%;
+    max-width: 400px;
+  }
+}

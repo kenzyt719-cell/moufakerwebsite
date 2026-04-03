@@ -1,0 +1,145 @@
+@import url('https://fonts.cdnfonts.com/css/lufga');
+
+.reviews-section {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #1e0b3a, #2b0f5a);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  font-family: 'Lufga', sans-serif;
+  color: white;
+  text-align: center;
+}
+
+/* Title */
+.reviews-title {
+  font-size: 40px;
+  margin: 0;
+}
+
+.reviews-subtitle {
+  font-size: 16px;
+  opacity: 0.7;
+  margin-bottom: 20px;
+}
+
+/* Card */
+.review-card {
+  width: 60%;
+  max-width: 700px;
+  border-radius: 20px;
+  padding: 30px;
+  text-align: left;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.4);
+  position: relative;
+  transition: 0.4s ease;
+}
+
+/* Different colors */
+.card-0 {
+  background: #7c83d6;
+}
+
+.card-1 {
+  background: #e572ff;
+}
+
+.card-2 {
+  background: #3ecf8e;
+}
+
+/* Quote */
+.quote {
+  font-size: 40px;
+  opacity: 0.4;
+  margin: 0;
+}
+
+/* Text */
+.review-text {
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 15px 0 25px;
+}
+
+/* User */
+.review-user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatar {
+  width: 45px;
+  height: 45px;
+  background: white;
+  color: black;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Stars */
+.stars {
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+  color: gold;
+  font-size: 18px;
+}
+
+/* Arrows */
+.arrows {
+  display: flex;
+  gap: 40px;
+}
+
+.arrows h1 {
+  cursor: pointer;
+  font-size: 30px;
+  transition: 0.3s;
+}
+
+.arrows h1:hover {
+  transform: scale(1.2);
+}
+
+/* Rating box */
+.rating-box {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 25px 40px;
+  border-radius: 15px;
+}
+
+.rating-box h2 {
+  margin: 10px 0 5px;
+}
+
+.rating-box p {
+  opacity: 0.7;
+}
+
+.stars.big {
+  font-size: 24px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .review-card {
+    width: 90%;
+  }
+
+  .reviews-title {
+    font-size: 28px;
+  }
+
+  .review-text {
+    font-size: 16px;
+  }
+}
