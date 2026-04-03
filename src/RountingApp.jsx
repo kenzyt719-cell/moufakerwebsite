@@ -6,6 +6,8 @@ import ContactUs from './Pages/ContactUs';
 import FaqScreen from './Pages/FaqScreen';
 import HomeMain from './Pages/HomeMain';
 
+import Pricesscreen from './Pages/Pricesscreen';
+
 
 
 const RountingApp = () => {
@@ -19,6 +21,7 @@ const RountingApp = () => {
         <Route path="/ContactUs" element={<ContactUs />} />
         <Route path="/FaqScreen" element={<FaqScreen />} />
         <Route path="/HomeMain" element={<HomeMain />} />
+        <Route path="/Pricesscreen" element={<Pricesscreen />} />
 
         
 
