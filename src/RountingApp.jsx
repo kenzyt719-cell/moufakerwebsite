@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from './Pages/Home';
 import ForSchool from './Pages/ForSchool';
+import ContactUs from './Pages/ContactUs';
 
 const RountingApp = () => {
     return ( <>
@@ -11,6 +12,7 @@ const RountingApp = () => {
   
         <Route path="/ForSchool" element={<ForSchool />} />
 
+        <Route path="/ContactUs" element={<ContactUs />} />
 
     </Routes>
     </BrowserRouter>
