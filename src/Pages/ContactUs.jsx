@@ -1,11 +1,17 @@
 import React from "react";
 import "./ContactUs.css";
+import Nav from "../Components/Layout/Nav";
+
 import icon from "../../src/Assets/bb01.png";
 import Titleandsub from "../Components/Common/Titleandsub";
+import Footer from "../Components/Layout/Footer";
+
 const ContactUs = () => {
   return (
     <>
-    
+        <div className='contacthoem'>
+ <Nav />
+
       <Titleandsub
         title="Get in touch"
         subtitle="Have questions? We're here to help you discover how Moufakker can transform your learning experience"
@@ -93,6 +99,9 @@ const ContactUs = () => {
 
         </div>
       </div>
+      </div>
+       <Footer />
+      
     </>
   );
 };
