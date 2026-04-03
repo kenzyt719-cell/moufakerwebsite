@@ -29,8 +29,9 @@ const ForSchool = () => {
 
 
 <Homesection
-  title="Your Journey to Success Starts Here"
-  description="Imagine a world where studying isn't overwhelming. Where you have a personal companion that understands your struggles, celebrates your wins, and guides you every step of the way."
+  title="Upgrade Your School's 
+Academic System."
+  description="Moufakker combines structured study planning, performance tracking, student wellness support, and parent transparency into one unified platform."
   buttonText="Start Your Free Trial"
 />
 
