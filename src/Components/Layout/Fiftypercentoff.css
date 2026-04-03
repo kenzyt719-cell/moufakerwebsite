@@ -84,7 +84,7 @@
   right: -60px;
   bottom: 0;
   height: 160%;
-  max-height: 530px;
+      max-height: 710px;
   object-fit: contain;
   transition: transform 0.5s ease;
 }

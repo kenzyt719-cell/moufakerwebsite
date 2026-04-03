@@ -15,6 +15,7 @@ import Sec02forschool from "../Components/Layout/Sec02forschool";
 import Sec03provides from "../Components/Layout/Sec03provides";
 import Sec04forschool from "../Components/Layout/Sec04forschool";
 import Squares from "../Components/Layout/Squares";
+import Howitworks from "../Components/Layout/Howitworks";
 
 import FeaturesSection from "../Components/Layout/FeaturesSection";
 
@@ -38,6 +39,7 @@ const ForSchool = () => {
 <Sec04forschool />
 <Squares />
 <FeaturesSection />
+<Howitworks />
 
 
     </div>
