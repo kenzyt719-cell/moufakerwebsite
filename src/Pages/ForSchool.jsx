@@ -40,7 +40,6 @@ Academic System."
 <Sec04forschool />
 <Squares />
 <FeaturesSection />
-<Howitworks />
 
 
     </div>
