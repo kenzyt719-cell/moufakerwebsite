@@ -3,6 +3,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from './Pages/Home';
 import ForSchool from './Pages/ForSchool';
 import ContactUs from './Pages/ContactUs';
+import FaqScreen from './Pages/FaqScreen';
+
 
 const RountingApp = () => {
     return ( <>
@@ -13,6 +15,9 @@ const RountingApp = () => {
         <Route path="/ForSchool" element={<ForSchool />} />
 
         <Route path="/ContactUs" element={<ContactUs />} />
+        <Route path="/FaqScreen" element={<FaqScreen />} />
+
+        
 
     </Routes>
     </BrowserRouter>

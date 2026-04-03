@@ -1,8 +1,8 @@
 .contact-section {
   display: flex;
   gap: 40px;
-  padding: 80px;
-  background: linear-gradient(180deg, #0b0220, #1a0440);
+    padding: 0px 80px;
+  /* background: linear-gradient(180deg, #0b0220, #1a0440); */
   font-family: "Lufga", sans-serif;
   color: #fff;
 }

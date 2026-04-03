@@ -1,0 +1,114 @@
+/* MAIN CONTAINER (each row) */
+.divmainnfaq {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 80px 0;
+    padding: 0 10%;
+  gap: 40px;
+}
+
+/* FAQ BOX CONTAINER */
+.bosxesfaw {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 60%;
+}
+
+/* IMAGE STYLE */
+.faq-girl {
+  width: 260px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* EACH QUESTION BOX */
+.faqdiv {
+  background: #492dac;
+  border-radius: 26px;
+  padding: 18px 22px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* HOVER EFFECT */
+.faqdiv:hover {
+  transform: scale(1.02);
+  background: #5a3fd1;
+}
+
+/* ACTIVE OPEN BOX */
+.faqdiv.active {
+  background: #5a3fd1;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* HEADER (QUESTION + ARROW) */
+.faq-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* QUESTION TEXT */
+.h1faqdiv {
+  color: #fff;
+  font-family: "Lufga", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* ARROW */
+.arrow {
+  color: #fff;
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+/* ROTATE ARROW WHEN ACTIVE */
+.faqdiv.active .arrow {
+  transform: rotate(180deg);
+}
+
+/* ANSWER TEXT */
+.faq-answer {
+  margin-top: 12px;
+  color: #e0e0e0;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* ------------------- */
+/* 📱 RESPONSIVE DESIGN */
+/* ------------------- */
+
+@media (max-width: 900px) {
+  .divmainnfaq {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .bosxesfaw {
+    width: 100%;
+  }
+
+  .faq-girl {
+    width: 200px;
+  }
+}
+
+@media (max-width: 500px) {
+  .h1faqdiv {
+    font-size: 15px;
+  }
+
+  .faq-answer {
+    font-size: 13px;
+  }
+
+  .faqdiv {
+    padding: 15px;
+  }
+}
