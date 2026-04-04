@@ -25,35 +25,35 @@ const Sec02forschool = () => {
         />
         <Boxsesso2dorschooL
           className="from-right"
-          bgColor="#FF8080"
+             bgColor="#9880FF"
           imgSrc={bb02}
           title="Teachers overwhelmed with admin tasks"
           description="Excessive paperwork and scheduling burdens reduce time for instruction and student engagement."
         />
         <Boxsesso2dorschooL
           className="from-top"
-          bgColor="#80FFB0"
+        bgColor="#9880FF"
           imgSrc={bb03}
           title="Lack of personalized learning"
           description="Students often don’t receive tailored instruction to match their unique learning styles and needs."
         />
         <Boxsesso2dorschooL
           className="from-bottom"
-          bgColor="#FFEC80"
+     bgColor="#9880FF"
           imgSrc={bb04}
           title="Communication gaps with parents"
           description="Inefficient communication channels make it difficult for schools to keep families informed and engaged."
         />
         <Boxsesso2dorschooL
           className="from-left"
-          bgColor="#80C0FF"
+           bgColor="#9880FF"
           imgSrc={bb01}
           title="Limited resource access"
           description="Schools often lack access to modern educational tools and technologies that enhance learning."
         />
         <Boxsesso2dorschooL
           className="from-right"
-          bgColor="#D480FF"
+      bgColor="#9880FF"
           imgSrc={bb02}
           title="High student-to-teacher ratios"
           description="Large class sizes make it challenging for teachers to provide individual attention."

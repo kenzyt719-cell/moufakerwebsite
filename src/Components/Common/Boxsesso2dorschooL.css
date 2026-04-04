@@ -1,7 +1,7 @@
 .sec2boxx {
   display: flex;
   width: 270px;
-  height: 270px;
+    height: 390px;
   flex-direction: column;
   padding: 33px;
   justify-content: center;
