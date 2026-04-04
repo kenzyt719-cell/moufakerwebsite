@@ -34,6 +34,7 @@ line-height: 22.389px; /* 142.857% */
 height: 35.822px;
 }
 .divsquares{
+        margin-bottom: 10%;
     display: flex;
     justify-content: center; 
     gap: 30px;

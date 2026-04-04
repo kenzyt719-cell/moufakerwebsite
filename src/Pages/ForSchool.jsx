@@ -9,6 +9,7 @@ import Sec04forschool from "../Components/Layout/Sec04forschool";
 import Squares from "../Components/Layout/Squares";
 import FeaturesSection from "../Components/Layout/FeaturesSection";
 import Footer from "../Components/Layout/Footer";
+import Titleandsub from "../Components/Common/Titleandsub";
 
 import "./ForSchool.css";
 
@@ -24,7 +25,7 @@ const ForSchool = () => {
     const { data, error } = await supabase
       .from("hero")
       .select("*")
-      .eq("id", 1)
+      .eq("id", 2)
       .single();
 
     if (error) {
@@ -52,6 +53,7 @@ const ForSchool = () => {
       <Sec03provides />
       <Sec04forschool />
       <Squares />
+       
       <FeaturesSection />
       <Footer />
     </div>

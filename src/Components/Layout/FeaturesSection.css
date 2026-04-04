@@ -144,3 +144,7 @@
 .dashboard {
   transition-delay: 0.5s;
 }
+.divbgfeatures{
+padding-top: 20px;
+  background-color: #1D0033;
+}

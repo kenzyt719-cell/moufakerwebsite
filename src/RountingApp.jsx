@@ -8,6 +8,7 @@ import HomeMain from './Pages/HomeMain';
 import IWorks from './Pages/IWorks';
 
 import Pricesscreen from './Pages/Pricesscreen';
+import Blogs from './Pages/Blogs';
 
 
 
@@ -24,6 +25,7 @@ const RountingApp = () => {
         <Route path="/HomeMain" element={<HomeMain />} />
         <Route path="/Pricesscreen" element={<Pricesscreen />} />
         <Route path="/IWorks" element={<IWorks />} />
+        <Route path="/Blogs" element={<Blogs />} />
 
 
         

@@ -2,7 +2,7 @@ import React from "react";
 import "./Blogone.css";
 import img1 from "../../Assets/photoblog.png";
 
-const Blogone = () => {
+const Blogone = ({ title, subTitle }) => {
   return (
     <div className="blog-card">
       <img src={img1} alt="" className="blog-img" />
@@ -11,11 +11,11 @@ const Blogone = () => {
         <p className="blog-tag">Study Tips</p>
 
         <h2 className="blog-title">
-          The Importance of Personalized Study Plans
+          {title}
         </h2>
 
         <p className="blog-desc">
-          Proven strategies to excel in your Thanaweya Amma exams
+          {subTitle}
         </p>
 
         <div className="blog-footer">

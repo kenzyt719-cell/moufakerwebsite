@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./FeaturesSection.css";
 import icon from "../../Assets/bb01.png";
+import Titleandsub from "../Common/Titleandsub";
 
 const FeaturesSection = () => {
   const [active, setActive] = useState(false);
@@ -14,11 +15,23 @@ const FeaturesSection = () => {
   ];
 
   return (
+    <>
+   <div className="divbgfeatures">
+
+  
+   <Titleandsub
+            title="Benefits for Teachers"
+            subtitle="Practical daily advantages that save time and bring clarity to your teaching workflow."
+          />
+          
     <div
+    
       className={`features-section ${active ? "active" : ""}`}
       onMouseEnter={() => setActive(true)}
     >
       
+     
+    
       {/* LEFT */}
       <div className="features-left">
         {features.map((text, i) => (
@@ -56,6 +69,8 @@ const FeaturesSection = () => {
       </div>
 
     </div>
+     </div>
+        </>
   );
 };
 
