@@ -53,7 +53,7 @@ body {
   object-fit: contain;
 }
 
-/* links */
+/* li styles */
 .navbar li {
   cursor: pointer;
   position: relative;
@@ -80,27 +80,46 @@ body {
   color: #ffd6ff;
 }
 
+/* links inside li */
+.navbar li a {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+  padding: 5px 0;
+}
+
+/* hover effect for links */
+.navbar li a:hover {
+  color: #ffd6ff;
+}
+
 /* dropdown */
+.dropdown {
+  position: relative; /* لازم عشان submenu */
+}
+
 .dropdown .submenu {
   position: absolute;
-  top: 45px;
+  top: 100%; /* يظهر تحت الـ parent */
   left: 0;
   background: #4b2e5e;
   list-style: none;
   padding: 10px 0;
   border-radius: 10px;
   min-width: 150px;
-  display: none;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 
   opacity: 0;
+  visibility: hidden; /* مش ظاهر ما يبقاش قابل للضغط */
   transform: translateY(10px);
   transition: 0.3s;
+  z-index: 1000;
 }
 
-.dropdown:hover .submenu {
-  display: block;
+/* يظهر عند hover على parent أو submenu */
+.dropdown:hover .submenu,
+.dropdown .submenu:hover {
   opacity: 1;
+  visibility: visible;
   transform: translateY(0);
 }
 
@@ -110,6 +129,14 @@ body {
   white-space: nowrap;
 }
 
-.submenu li:hover {
+/* submenu links */
+.submenu li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+
+.submenu li a:hover {
   background: rgba(255,255,255,0.1);
+  color: #ffd6ff;
 }

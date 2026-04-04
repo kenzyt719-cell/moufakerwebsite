@@ -18,13 +18,13 @@ const RountingApp = () => {
     return ( <>
     <BrowserRouter>
     <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<HomeMain />} />
   
         <Route path="/ForSchool" element={<ForSchool />} />
 
         <Route path="/ContactUs" element={<ContactUs />} />
         <Route path="/FaqScreen" element={<FaqScreen />} />
-        <Route path="/HomeMain" element={<HomeMain />} />
+        <Route path="/Home" element={<Home />} />
         <Route path="/Pricesscreen" element={<Pricesscreen />} />
         <Route path="/IWorks" element={<IWorks />} />
         <Route path="/Blogs" element={<Blogs />} />

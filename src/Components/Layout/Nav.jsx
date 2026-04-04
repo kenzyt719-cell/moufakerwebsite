@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Nav.css";
 import logo from "../../Assets/navlogo.png";
 
@@ -7,38 +8,40 @@ const Nav = () => {
     <div className="nav-wrapper">
       <nav className="navbar">
 
+        {/* Left menu */}
         <ul className="nav-left">
-          <li>How It Works</li>
-          <li>Career</li>
-          <li>Pricing</li>
+          <li><Link to="/IWorks">How It Works</Link></li>
+          <li><Link to="/Pricesscreen">Career</Link></li>
+          <li><Link to="/Pricesscreen">Pricing</Link></li>
         </ul>
 
-        {/* logo */}
+        {/* Logo */}
         <div className="logo">
-          <img src={logo} alt="logo" />
+          <Link to="/"><img src={logo} alt="logo" /></Link>
         </div>
 
+        {/* Right menu */}
         <ul className="nav-right">
           <li className="dropdown">
             Resources
             <ul className="submenu">
-              <li>Blogs</li>
-              <li>Our services</li>
-              <li>FAQ</li>
+              <li><Link to="/Blogs">Blogs</Link></li>
+              <li><Link to="/SevicesScreen">Our Services</Link></li>
+              <li><Link to="/FaqScreen">FAQ</Link></li>
             </ul>
           </li>
 
           <li className="dropdown">
             About
             <ul className="submenu">
-              <li>About us</li>
-              <li>For Parents</li>
-              <li>For Students</li>
-              <li>For Schools</li>
+              <li><Link to="/ContactUs">About us</Link></li>
+              <li><Link to="/ForSchool">For Parents</Link></li>
+              <li><Link to="/ForSchool">For Students</Link></li>
+              <li><Link to="/ForSchool">For Schools</Link></li>
             </ul>
           </li>
 
-          <li>Contact us</li>
+          <li><Link to="/ContactUs">Contact us</Link></li>
         </ul>
 
       </nav>

@@ -1,9 +1,11 @@
 import React from "react";
-
+import "./SevicesScreen.css";
+import Nav from "../Components/Layout/Nav";
+import Footer from "../Components/Layout/Footer";
 
 const Card = () => {
   return (
-    <div className="card">
+    <div className="service-card">
       <div className="header">
         <div className="icon">🎓</div>
         <div>
@@ -28,11 +30,16 @@ const Card = () => {
 
 const ServicesScreen = () => {
   return (
-    <div className="services-screen">
-      <Card />
-      <Card />
-      <Card />
-    </div>
+    <>
+      <Nav /> {/* Navbar هنا مرة واحدة فقط */}
+      <div className="services-screen">
+        <Card />
+        <Card />
+        <Card />
+      </div>
+             <Footer />
+      
+    </>
   );
 };
 
