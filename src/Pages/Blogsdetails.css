@@ -1,0 +1,66 @@
+.h1blogdetails{
+    color: #FFF;
+    text-align: center;
+    font-family: Lufga;
+    font-size: 29.323px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 180%; /* 52.781px */
+    transition: all 0.4s ease;
+}
+
+.h2blogsdetails{
+    color: #FFF;
+    font-family: Lufga;
+    font-size: 15.994px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 180%; /* 28.789px */
+    letter-spacing: 0.32px;
+    transition: all 0.4s ease;
+}
+
+.divdiovblogs{
+    gap: 50px;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+/* sections wrapper */
+.blog-section {
+    transition: all 0.4s ease;
+    opacity: 1;  /* default full opacity */
+    transform: scale(1); /* default scale */
+    cursor: pointer;
+}
+
+/* hover على السيكشن */
+.blog-section:hover {
+    opacity: 1; /* يظهر كامل */
+    transform: scale(1.02);
+}
+
+/* صور */
+.imgblogdetails {
+    width: 100%;
+    border-radius: 20px;
+    transition: all 0.4s ease;
+}
+
+/* زووم على الصورة عند hover */
+.blog-section:hover .imgblogdetails {
+    transform: scale(1.05);
+}
+
+/* حركة بسيطة للنصوص */
+.blog-section:hover h1,
+.blog-section:hover h2,
+.blog-section:hover h3 {
+    transform: translateY(-5px);
+}
+
+/* لما الماوس يطلع، كل حاجة ترجع للوضع الأصلي بسبب transition */
