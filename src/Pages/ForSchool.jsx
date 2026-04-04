@@ -1,59 +1,61 @@
-import React, { Component } from 'react';
+import React, { useEffect, useState } from "react";
+import { supabase } from "../supabaseClient";
+
 import Nav from "../Components/Layout/Nav";
 import Homesection from "../Components/Layout/Homesection";
-import Dayinlife01 from "../Components/Layout/Dayinlife01";
-import Everythingsection from "../Components/Layout/Everythingsection";
-import ThreePillarSection from "../Components/Layout/ThreePillarSection";
-import Fiftypercentoff from "../Components/Layout/Fiftypercentoff";
-import Downloadapp from "../Components/Layout/Downloadapp";
-import Journeyanimation  from "../Components/Layout/Journeyanimation";
-import Howtostudy  from "../Components/Layout/Howtostudy";
-import Transform  from "../Components/Layout/Transform";
-import Heromain  from "../Components/Layout/Heromain";
 import Sec02forschool from "../Components/Layout/Sec02forschool";
-
 import Sec03provides from "../Components/Layout/Sec03provides";
 import Sec04forschool from "../Components/Layout/Sec04forschool";
 import Squares from "../Components/Layout/Squares";
-import Howitworks from "../Components/Layout/Howitworks";
-import Footer from "../Components/Layout/Footer";
-
 import FeaturesSection from "../Components/Layout/FeaturesSection";
+import Footer from "../Components/Layout/Footer";
 
 import "./ForSchool.css";
 
 const ForSchool = () => {
-    return ( <>
-    <div className='home'>
- <Nav />
+  const [hero, setHero] = useState(null);
+  const [loading, setLoading] = useState(true);
 
+  useEffect(() => {
+    fetchHero();
+  }, []);
 
+  const fetchHero = async () => {
+    const { data, error } = await supabase
+      .from("hero")
+      .select("*")
+      .eq("id", 1)
+      .single();
 
-<Homesection
-  title="Upgrade Your School's 
-Academic System."
-  description="Moufakker combines structured study planning, performance tracking, student wellness support, and parent transparency into one unified platform."
-  buttonText="Start Your Free Trial"
-/>
+    if (error) {
+      console.error("Error:", error);
+    } else {
+      setHero(data);
+    }
 
-<Sec02forschool />
-<Sec03provides />
-<Sec04forschool />
-<Squares />
-<FeaturesSection />
-       <Footer />
+    setLoading(false);
+  };
 
+  if (loading) return <div>Loading...</div>;
 
+  return (
+    <div className="home">
+      <Nav />
+
+      <Homesection
+        title={hero.title01}
+        description={hero.description}
+        buttonText={hero.button || "Start Your Free Trial"}
+      />
+
+      <Sec02forschool />
+      <Sec03provides />
+      <Sec04forschool />
+      <Squares />
+      <FeaturesSection />
+      <Footer />
     </div>
-     
+  );
+};
 
-    
-    
-    
-    
-    
-    
-    </> );
-}
- 
 export default ForSchool;

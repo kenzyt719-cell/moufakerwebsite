@@ -1,7 +1,7 @@
 import React from "react";
 import "./Homesection.css";
 import ButtonOne from "../Common/ButtonOne";
-import bg from "../../Assets/bgscreens.png"; // الخلفية ثابتة
+import bg from "../../Assets/bgscreens.png";
 
 const Homesection = ({ title, description, buttonText }) => {
   return (
@@ -12,7 +12,7 @@ const Homesection = ({ title, description, buttonText }) => {
       <div className="overlay"></div>
 
       <div className="home-content">
-        <h1>{title}</h1>
+        <h1 style={{ whiteSpace: "pre-line" }}>{title}</h1>
         <p>{description}</p>
         <ButtonOne text={buttonText} />
       </div>
