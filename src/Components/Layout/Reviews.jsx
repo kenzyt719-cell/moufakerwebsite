@@ -59,7 +59,6 @@ const Reviews = () => {
       </div>
 
       <div className="rating-box">
-        <div className="stars big">★★★★★</div>
         <h2>4.9 out of 5</h2>
         <p>From over 10,000 reviews</p>
       </div>

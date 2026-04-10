@@ -12,6 +12,8 @@ import Pricesscreen from './Pages/Pricesscreen';
 import Blogs from './Pages/Blogs';
 import Blogsdetails from './Pages/Blogsdetails';
 
+import ForParents from './Pages/ForParents';
+
 
 
 const RountingApp = () => {
@@ -30,6 +32,7 @@ const RountingApp = () => {
         <Route path="/Blogs" element={<Blogs />} />
         <Route path="/Blogsdetails" element={<Blogsdetails />} />
         <Route path="/SevicesScreen" element={<SevicesScreen />} />
+        <Route path="/ForParents" element={<ForParents />} />
 
 
         

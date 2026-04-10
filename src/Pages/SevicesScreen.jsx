@@ -2,6 +2,8 @@ import React from "react";
 import "./SevicesScreen.css";
 import Nav from "../Components/Layout/Nav";
 import Footer from "../Components/Layout/Footer";
+import ThreePillarSection from "../Components/Layout/ThreePillarSection";
+import Fiftypercentoff from "../Components/Layout/Fiftypercentoff";
 
 const Card = () => {
   return (
@@ -36,7 +38,10 @@ const ServicesScreen = () => {
         <Card />
         <Card />
         <Card />
+ <Fiftypercentoff />
       </div>
+         <ThreePillarSection />
+
              <Footer />
       
     </>
