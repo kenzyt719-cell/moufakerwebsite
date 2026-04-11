@@ -1,71 +1,63 @@
-import React, { Component } from 'react';
+import React, { useEffect, useState } from "react";
+import { supabase } from "../supabaseClient";
+
 import Nav from "../Components/Layout/Nav";
 import Homesection from "../Components/Layout/Homesection";
-import Dayinlife01 from "../Components/Layout/Dayinlife01";
-import Everythingsection from "../Components/Layout/Everythingsection";
-import ThreePillarSection from "../Components/Layout/ThreePillarSection";
-import Fiftypercentoff from "../Components/Layout/Fiftypercentoff";
-import Downloadapp from "../Components/Layout/Downloadapp";
-import Journeyanimation  from "../Components/Layout/Journeyanimation";
-import Howtostudy  from "../Components/Layout/Howtostudy";
-import Transform  from "../Components/Layout/Transform";
-import Heromain  from "../Components/Layout/Heromain";
+import Journeyanimation from "../Components/Layout/Journeyanimation";
 import TabTab from "../Components/Layout/TabTab";
 import Reviews from "../Components/Layout/Reviews";
+import Fiftypercentoff from "../Components/Layout/Fiftypercentoff";
 import Pricing from "../Components/Layout/Pricing";
+import Downloadapp from "../Components/Layout/Downloadapp";
 import Footer from "../Components/Layout/Footer";
-
 
 import "./HomeMain.css";
 
 const HomeMain = () => {
-    return ( <>
-    <div className='home'>
- <Nav />
+  const [hero, setHero] = useState(null);
+  const [loading, setLoading] = useState(true);
 
-<Homesection
-  title="Your Journey to Success Starts Here"
-  description="Imagine a world where studying isn't overwhelming. Where you have a personal companion that understands your struggles, celebrates your wins, and guides you every step of the way."
-  buttonText="Start Your Free Trial"
-/>
+  useEffect(() => {
+    fetchHero();
+  }, []);
 
+  const fetchHero = async () => {
+    const { data, error } = await supabase
+      .from("hero")
+      .select("*")
+      .eq("id", 1) // 👈 THIS IS THE ONLY DIFFERENCE
+      .single();
 
-<Journeyanimation />
+    if (error) {
+      console.error("Error:", error);
+    } else {
+      setHero(data);
+    }
+
+    setLoading(false);
+  };
+
+  if (loading) return <div>Loading...</div>;
+
+  return (
+    <div className="home">
+      <Nav />
+
+      <Homesection
+        title={hero?.title01}
+        description={hero?.description}
+        buttonText={hero?.button || "Start Your Free Trial"}
+      />
+
+      <Journeyanimation />
       <TabTab />
       <Reviews />
- <Fiftypercentoff />
+      <Fiftypercentoff />
       <Pricing />
- <Downloadapp />
- <Footer />
-
-
-
-
-
- {/* <Dayinlife01 />
- <Everythingsection />
- <ThreePillarSection />
- <Fiftypercentoff />
-<Howtostudy />
-<Transform /> */}
-{/* <Heromain /> */}
-
-
-
-
-
-
-
+      <Downloadapp />
+      <Footer />
     </div>
-     
+  );
+};
 
-    
-    
-    
-    
-    
-    
-    </> );
-}
- 
 export default HomeMain;

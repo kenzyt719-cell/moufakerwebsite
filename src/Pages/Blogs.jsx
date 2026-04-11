@@ -5,9 +5,11 @@ import Titleandsub from "../Components/Common/Titleandsub";
 import Footer from "../Components/Layout/Footer";
 import Blogone from "../Components/Layout/Blogone";
 import { supabase } from "../supabaseClient";
+import { useNavigate } from "react-router-dom";
 
 const Blogs = () => {
   const [blogs, setBlogs] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetchBlogs();
@@ -17,7 +19,7 @@ const Blogs = () => {
     const { data, error } = await supabase
       .from("blogs_screen")
       .select("*")
-      .limit(6); // 👈 أول 6 بس
+      .limit(6);
 
     if (error) {
       console.log(error);
@@ -39,11 +41,16 @@ const Blogs = () => {
 
       <div className="blogsdiv">
         {blogs.map((blog) => (
-          <Blogone
+          <div
             key={blog.id}
-            title={blog.title}
-            subTitle={blog.sub_title}
-          />
+            onClick={() => navigate(`/blogs/${blog.id}`)}
+            style={{ cursor: "pointer" }}
+          >
+            <Blogone
+              title={blog.title}
+              subTitle={blog.sub_title}
+            />
+          </div>
         ))}
       </div>
 

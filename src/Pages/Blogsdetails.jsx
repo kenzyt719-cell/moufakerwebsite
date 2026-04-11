@@ -5,33 +5,35 @@ import Titleandsub from "../Components/Common/Titleandsub";
 import Footer from "../Components/Layout/Footer";
 import blogImg from "../Assets/blogsmain.png";
 import { supabase } from "../supabaseClient";
+import { useParams } from "react-router-dom";
 
 const Blogsdetails = () => {
   const [blog, setBlog] = useState(null);
+  const { id } = useParams();
 
   useEffect(() => {
-    const fetchBlog = async () => {
-      const { data, error } = await supabase
-        .from("blogs_details")
-        .select("*")
-        .eq("id", 1)
-        .single();
-
-      if (error) {
-        console.log(error);
-      } else {
-        setBlog({
-          title: data.title,
-          description1: data.decription1,
-          description2: data.decription2,
-        });
-      }
-    };
-
     fetchBlog();
-  }, []);
+  }, [id]);
 
-  if (!blog) return null;
+  const fetchBlog = async () => {
+    const { data, error } = await supabase
+      .from("blogs_details")
+      .select("*")
+      .eq("id", Number(id)) // 👈 مهم
+      .single();
+
+    if (error) {
+      console.log(error);
+    } else {
+      setBlog({
+        title: data.title,
+        description1: data.decription1,
+        description2: data.decription2,
+      });
+    }
+  };
+
+  if (!blog) return <p>Loading...</p>;
 
   return (
     <>
