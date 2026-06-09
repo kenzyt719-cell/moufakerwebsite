@@ -10,12 +10,11 @@ import Fiftypercentoff from "../Components/Layout/Fiftypercentoff";
 import Pricing from "../Components/Layout/Pricing";
 import Downloadapp from "../Components/Layout/Downloadapp";
 import Footer from "../Components/Layout/Footer";
-
 import IntroAnimation from "../Components/Layout/IntroAnimation";
 
-import "./HomeMain.css";
+import "./Aboutme.css";
 
-const HomeMain = () => {
+const Aboutme = () => {
   const [hero, setHero] = useState(null);
   const [loading, setLoading] = useState(true);
 
@@ -25,13 +24,13 @@ const HomeMain = () => {
 
   const fetchHero = async () => {
     const { data, error } = await supabase
-      .from("hero")
+      .from("hero") // 👈 same table
       .select("*")
-      .eq("id", 1) // 👈 THIS IS THE ONLY DIFFERENCE
+      .eq("id", 4) // 👈 THIS is the 4th row
       .single();
 
     if (error) {
-      console.error("Error:", error);
+      console.error("Error fetching hero:", error);
     } else {
       setHero(data);
     }
@@ -42,14 +41,15 @@ const HomeMain = () => {
   if (loading) return <div>Loading...</div>;
 
   return (
-    <div className="home">
+    <div className="aboutme">
       <Nav />
-<IntroAnimation />
-      {/* <Homesection
+      <IntroAnimation />
+
+      <Homesection
         title={hero?.title01}
         description={hero?.description}
         buttonText={hero?.button || "Start Your Free Trial"}
-      /> */}
+      />
 
       <Journeyanimation />
       <TabTab />
@@ -62,4 +62,4 @@ const HomeMain = () => {
   );
 };
 
-export default HomeMain;
+export default Aboutme;

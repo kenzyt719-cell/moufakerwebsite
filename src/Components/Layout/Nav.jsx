@@ -8,19 +8,18 @@ const Nav = () => {
     <div className="nav-wrapper">
       <nav className="navbar">
 
-        {/* Left menu */}
         <ul className="nav-left">
           <li><Link to="/IWorks">How It Works</Link></li>
           <li><Link to="/Pricesscreen">Career</Link></li>
           <li><Link to="/Pricesscreen">Pricing</Link></li>
         </ul>
 
-        {/* Logo */}
+   
         <div className="logo">
           <Link to="/"><img src={logo} alt="logo" /></Link>
         </div>
 
-        {/* Right menu */}
+
         <ul className="nav-right">
           <li className="dropdown">
             Resources

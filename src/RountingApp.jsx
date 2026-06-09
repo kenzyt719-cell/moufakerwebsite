@@ -12,6 +12,10 @@ import Pricesscreen from './Pages/Pricesscreen';
 import Blogs from './Pages/Blogs';
 import Blogsdetails from './Pages/Blogsdetails';
 import ForParents from './Pages/ForParents';
+import Aboutme from './Pages/Aboutme';
+import Careers from './Pages/Careers';
+import CareerApply from './Pages/CareerApply';
+
 
 const RountingApp = () => {
   return (
@@ -27,11 +31,14 @@ const RountingApp = () => {
         <Route path="/IWorks" element={<IWorks />} />
         <Route path="/SevicesScreen" element={<SevicesScreen />} />
         <Route path="/ForParents" element={<ForParents />} />
+        <Route path="/Aboutme" element={<Aboutme />} />
 
         {/* Blogs */}
         <Route path="/Blogs" element={<Blogs />} />
-        <Route path="/blogs/:id" element={<Blogsdetails />} /> {/* 👈 مهم */}
+        <Route path="/blogs/:id" element={<Blogsdetails />} />
 
+        <Route path="/Careers" element={<Careers />} /> 
+<Route path="/careers/:id" element={<CareerApply />} />
       </Routes>
     </BrowserRouter>
   );

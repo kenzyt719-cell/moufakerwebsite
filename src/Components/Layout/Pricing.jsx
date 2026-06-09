@@ -1,91 +1,73 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Pricing.css";
 import icon from "../../Assets/Container.png";
 import Titleandsub from "../Common/Titleandsub";
-
+import { supabase } from "../../supabaseClient";
 
 const Pricing = () => {
+  const [plans, setPlans] = useState([]);
+
+  useEffect(() => {
+    const fetchPlans = async () => {
+      const { data: screenData } = await supabase
+        .from("screens_web")
+        .select("id")
+        .eq("screen name", "prices")
+        .single();
+
+      if (!screenData) return;
+
+      const { data } = await supabase
+        .from("pricing_plans")
+        .select("*")
+        .eq("screen_id", screenData.id)
+        .order("id");
+
+      if (data) setPlans(data);
+    };
+
+    fetchPlans();
+  }, []);
+
+  if (!plans.length) return null;
+
   return (
     <>
       <Titleandsub
         title="Choose Your Perfect Plan"
         subtitle="Flexible plans for all your educational needs"
       />
-    <div className="pricing-wrapper">
-      <div className="pricing-container">
+      <div className="pricing-wrapper">
+        <div className="pricing-container">
+          {plans.map((plan) => (
+            <div key={plan.id} className={`card ${plan.color}`}>
+              {plan.badge ? <div className="badge">{plan.badge}</div> : null}
 
-        {/* BASIC */}
-        <div className="card blue">
-          <img src={icon} alt="icon" className="icon" />
+              <img src={icon} alt="icon" className="icon" />
 
-          <h2>Basic</h2>
-          <p className="desc">Perfect for students getting started</p>
+              <h2>{plan.plan_name}</h2>
+              <p className="desc">{plan.description}</p>
 
-          <h1 className="price">99 <span>EGP /mo</span></h1>
+              <h1 className="price">
+                {plan.price} <span>EGP /mo</span>
+              </h1>
 
-          <div className="features">
-            <p>✔ AI-powered study assistant</p>
-            <p>✔ Access to 500+ courses</p>
-            <p>✔ Basic progress tracking</p>
-            <p>✔ Email support</p>
-            <p>✔ Mobile app access</p>
-            <p>✔ Study planner</p>
-          </div>
+              <div className="features">
+                {plan.features
+                  .split("\n")
+                  .filter(Boolean)
+                  .map((feature, i) => (
+                    <p key={i}>✔ {feature}</p>
+                  ))}
+              </div>
 
-          <button className="btn">Get Started</button>
+              <button className={`btn ${plan.color === "pink" ? "gradient" : ""}`}>
+                Get Started
+              </button>
+            </div>
+          ))}
         </div>
-
-        {/* PRO */}
-        <div className="card pink">
-          <div className="badge">Most Popular</div>
-
-          <img src={icon} alt="icon" className="icon" />
-
-          <h2>Pro</h2>
-          <p className="desc">Most popular for serious learners</p>
-
-          <h1 className="price">199 <span>EGP /mo</span></h1>
-
-          <div className="features">
-            <p>✔ Everything in Basic</p>
-            <p>✔ Access to 1,200+ courses</p>
-            <p>✔ Advanced AI tutor</p>
-            <p>✔ Priority support</p>
-            <p>✔ Offline mode</p>
-            <p>✔ Personalized learning paths</p>
-            <p>✔ AR learning experiences</p>
-            <p>✔ PDF narration</p>
-          </div>
-
-          <button className="btn gradient">Get Started</button>
-        </div>
-
-        {/* PREMIUM */}
-        <div className="card orange">
-          <img src={icon} alt="icon" className="icon" />
-
-          <h2>Premium</h2>
-          <p className="desc">Complete learning ecosystem</p>
-
-          <h1 className="price">299 <span>EGP /mo</span></h1>
-
-          <div className="features">
-            <p>✔ Everything in Pro</p>
-            <p>✔ Unlimited courses</p>
-            <p>✔ 1-on-1 expert tutoring</p>
-            <p>✔ 24/7 priority support</p>
-            <p>✔ Family sharing</p>
-            <p>✔ School integration</p>
-            <p>✔ Custom study plans</p>
-            <p>✔ Smartwatch sync</p>
-            <p>✔ Early access to features</p>
-          </div>
-
-          <button className="btn">Get Started</button>
-        </div>
-
       </div>
-    </div>
     </>
   );
 };
