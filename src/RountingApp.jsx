@@ -15,6 +15,10 @@ import ForParents from './Pages/ForParents';
 import Aboutme from './Pages/Aboutme';
 import Careers from './Pages/Careers';
 import CareerApply from './Pages/CareerApply';
+import AboutUs from './Pages/AboutUs';
+import ForStudent from './Pages/ForStudent';
+
+
 
 
 const RountingApp = () => {
@@ -39,6 +43,10 @@ const RountingApp = () => {
 
         <Route path="/Careers" element={<Careers />} /> 
 <Route path="/careers/:id" element={<CareerApply />} />
+<Route path="/AboutUs" element={<AboutUs />} />
+
+<Route path="/ForStudent" element={<ForStudent />} />
+
       </Routes>
     </BrowserRouter>
   );

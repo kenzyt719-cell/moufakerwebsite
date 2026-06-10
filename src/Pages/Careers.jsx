@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Careers.css";
+import Nav from "../Components/Layout/Nav";
 
 const values = [
-  { icon: "🤍", title: "Impact First",    sub: "Make a real difference" },
-  { icon: "👥", title: "Collaborative",   sub: "Work with amazing people" },
-  { icon: "⚡", title: "Innovation",      sub: "Push boundaries daily" },
-  { icon: "🌐", title: "Growth",          sub: "Continuous learning" },
+  { icon: "🤍", title: "Impact First",  sub: "Make a real difference" },
+  { icon: "👥", title: "Collaborative", sub: "Work with amazing people" },
+  { icon: "⚡", title: "Innovation",    sub: "Push boundaries daily" },
+  { icon: "🌐", title: "Growth",        sub: "Continuous learning" },
 ];
 
 export const jobs = [
@@ -76,6 +77,7 @@ export default function Careers() {
 
   return (
     <div className="careers-page">
+      <Nav />
 
       <div className="careers-header">
         <h1>Join Our Mission</h1>
@@ -85,7 +87,7 @@ export default function Careers() {
       <div className="values-grid">
         {values.map((v, i) => (
           <div className="value-card" key={i}>
-            <span className="value-icon">{v.icon}</span>
+            <div className="value-icon">{v.icon}</div>
             <strong>{v.title}</strong>
             <span>{v.sub}</span>
           </div>

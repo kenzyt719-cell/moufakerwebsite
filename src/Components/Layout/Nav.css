@@ -1,24 +1,23 @@
 body {
   margin: 0;
   padding: 0;
-  padding-top: 120px; /* عشان الناف ثابت */
+  padding-top: 120px;
   font-family: sans-serif;
   background: #eaeaea;
   overflow-x: hidden;
 }
 
-/* wrapper */
 .nav-wrapper {
   position: fixed;
   top: 20px;
   left: 0;
   width: 100%;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   z-index: 999;
 }
 
-/* navbar */
 .navbar {
   width: 80%;
   background: #4b2e5e;
@@ -32,35 +31,32 @@ body {
   transition: all 0.3s ease;
 }
 
-/* hover on navbar */
 .navbar:hover {
   background: #5e3a75;
   transform: translateY(-3px);
 }
 
-/* left + right */
 .nav-left,
 .nav-right {
   display: flex;
   gap: 30px;
   list-style: none;
   align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
-/* logo */
 .logo img {
   height: 40px;
   object-fit: contain;
 }
 
-/* li styles */
 .navbar li {
   cursor: pointer;
   position: relative;
   transition: 0.3s;
 }
 
-/* underline animation */
 .navbar li::after {
   content: "";
   position: absolute;
@@ -72,15 +68,9 @@ body {
   transition: 0.3s;
 }
 
-.navbar li:hover::after {
-  width: 100%;
-}
+.navbar li:hover::after { width: 100%; }
+.navbar li:hover { color: #ffd6ff; }
 
-.navbar li:hover {
-  color: #ffd6ff;
-}
-
-/* links inside li */
 .navbar li a {
   color: inherit;
   text-decoration: none;
@@ -88,34 +78,26 @@ body {
   padding: 5px 0;
 }
 
-/* hover effect for links */
-.navbar li a:hover {
-  color: #ffd6ff;
-}
+.navbar li a:hover { color: #ffd6ff; }
 
-/* dropdown */
-.dropdown {
-  position: relative; /* لازم عشان submenu */
-}
+.dropdown { position: relative; }
 
 .dropdown .submenu {
   position: absolute;
-  top: 100%; /* يظهر تحت الـ parent */
+  top: 100%;
   left: 0;
   background: #4b2e5e;
   list-style: none;
   padding: 10px 0;
   border-radius: 10px;
   min-width: 150px;
-
   opacity: 0;
-  visibility: hidden; /* مش ظاهر ما يبقاش قابل للضغط */
+  visibility: hidden;
   transform: translateY(10px);
   transition: 0.3s;
   z-index: 1000;
 }
 
-/* يظهر عند hover على parent أو submenu */
 .dropdown:hover .submenu,
 .dropdown .submenu:hover {
   opacity: 1;
@@ -123,20 +105,96 @@ body {
   transform: translateY(0);
 }
 
-/* submenu items */
-.submenu li {
-  padding: 10px 20px;
-  white-space: nowrap;
+.submenu li { padding: 10px 20px; white-space: nowrap; }
+.submenu li a { color: white; text-decoration: none; display: block; }
+.submenu li a:hover { background: rgba(255,255,255,0.1); color: #ffd6ff; }
+
+/* ── Burger ── */
+.burger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 26px;
+  height: 18px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
 }
 
-/* submenu links */
-.submenu li a {
+.burger span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background: white;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+.burger.open span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+.burger.open span:nth-child(2) { opacity: 0; }
+.burger.open span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+/* ── Mobile Menu ── */
+.mobile-menu {
+  width: 80%;
+  background: #4b2e5e;
+  border-radius: 20px;
+  margin-top: 10px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+.mobile-menu.active { max-height: 600px; }
+
+.mobile-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 12px 0;
+}
+
+.mobile-menu ul li { border-bottom: 1px solid rgba(255,255,255,0.08); }
+.mobile-menu ul li:last-child { border-bottom: none; }
+
+.mobile-menu ul li a {
+  display: block;
+  padding: 12px 24px;
   color: white;
   text-decoration: none;
-  display: block;
+  font-size: 0.95rem;
+  transition: background 0.2s;
 }
 
-.submenu li a:hover {
-  background: rgba(255,255,255,0.1);
-  color: #ffd6ff;
+.mobile-menu ul li a:hover { background: rgba(255,255,255,0.08); color: #ffd6ff; }
+
+.mobile-divider {
+  padding: 10px 24px 4px;
+  font-size: 0.72rem;
+  color: #c4a8e0;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  body { padding-top: 100px; }
+
+  .nav-wrapper { top: 10px; }
+
+  .navbar {
+    width: 90%;
+    padding: 14px 24px;
+    border-radius: 20px;
+  }
+
+  .nav-left,
+  .nav-right { display: none; }
+
+  .burger { display: flex; }
+
+  .mobile-menu { width: 90%; }
 }
